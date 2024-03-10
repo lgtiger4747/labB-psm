@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:text="POR LUIS GALLARDO "
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="LO NUESTRO"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btn_sal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="15dp"
+        android:text="SALIR"
+        app:layout_constraintStart_toStartOf="@+id/rb_sig"
+        app:layout_constraintTop_toBottomOf="@+id/rb_sig" />
+
+    <Button
+        android:id="@+id/btn_sig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="81dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="59dp"
+        android:text="FACTURA"
+        android:onClick="cambioLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ch_refresco1" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="Platos"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/ch_plato1"
+        app:layout_constraintEnd_toEndOf="@+id/edt_nombre" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="38dp"
+        android:text="Refrescos"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/ch_refresco1"
+        app:layout_constraintTop_toTopOf="@+id/ch_plato3" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup2"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup2"
+        app:layout_constraintTop_toTopOf="@+id/textView9" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/rb_contado"
+        app:layout_constraintEnd_toStartOf="@+id/rb_contado"
+        app:layout_constraintStart_toStartOf="@+id/rb_contado"
+        app:layout_constraintTop_toTopOf="@+id/rb_contado" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="23dp"
+        android:text="FORMA DE PAGO"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ch_refresco2" />
+
+    <RadioButton
+        android:id="@+id/rb_contado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="9dp"
+        android:text="CONTADO"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <RadioButton
+        android:id="@+id/rb_sig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="TARJETA"
+        app:layout_constraintStart_toStartOf="@+id/rb_contado"
+        app:layout_constraintTop_toBottomOf="@+id/rb_contado" />
+
+    <CheckBox
+        android:id="@+id/ch_plato1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="24dp"
+        android:text="PIQUE MACHO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_nombre" />
+
+    <CheckBox
+        android:id="@+id/ch_refresco1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="23dp"
+        android:text="COCA COLA 2 L"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView7" />
+
+    <CheckBox
+        android:id="@+id/ch_refresco2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="2dp"
+        android:text="FANTA 2L"
+        app:layout_constraintStart_toStartOf="@+id/ch_refresco1"
+        app:layout_constraintTop_toBottomOf="@+id/ch_refresco1" />
+
+    <EditText
+        android:id="@+id/edt_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="NOMBRE"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edt_ci"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_ci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="14dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="CI/NIT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <CheckBox
+        android:id="@+id/ch_plato2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:text="POLLO FRITO"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/ch_plato1"
+        app:layout_constraintTop_toBottomOf="@+id/ch_plato1" />
+
+    <CheckBox
+        android:id="@+id/ch_plato3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="MILANESA DE POLLO"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/ch_plato2"
+        app:layout_constraintTop_toBottomOf="@+id/ch_plato2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
