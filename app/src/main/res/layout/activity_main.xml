@@ -32,34 +32,36 @@
         android:id="@+id/btn_sal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="94dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="34dp"
         android:text="SALIR"
-        app:layout_constraintStart_toStartOf="@+id/rb_sig"
-        app:layout_constraintTop_toBottomOf="@+id/rb_sig" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_sig"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="81dp"
-        android:layout_marginEnd="81dp"
-        android:layout_marginBottom="59dp"
-        android:text="FACTURA"
+        android:layout_marginStart="91dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginBottom="34dp"
         android:onClick="cambioLayout"
+        android:text="FACTURA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ch_refresco1" />
+        app:layout_constraintStart_toEndOf="@+id/forma_pago" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
         android:text="Platos"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/ch_plato1"
-        app:layout_constraintEnd_toEndOf="@+id/edt_nombre" />
+        app:layout_constraintEnd_toStartOf="@+id/edt_ci"
+        app:layout_constraintStart_toStartOf="@+id/edt_ci" />
 
     <TextView
         android:id="@+id/textView7"
@@ -77,18 +79,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/textView9"
-        app:layout_constraintEnd_toStartOf="@+id/radioGroup2"
-        app:layout_constraintStart_toStartOf="@+id/radioGroup2"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView9" />
 
     <RadioGroup
         android:id="@+id/radioGroup2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/rb_contado"
-        app:layout_constraintEnd_toStartOf="@+id/rb_contado"
-        app:layout_constraintStart_toStartOf="@+id/rb_contado"
-        app:layout_constraintTop_toTopOf="@+id/rb_contado" />
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView9"
@@ -101,24 +103,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ch_refresco2" />
 
-    <RadioButton
-        android:id="@+id/rb_contado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="9dp"
-        android:text="CONTADO"
-        app:layout_constraintStart_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
-    <RadioButton
-        android:id="@+id/rb_sig"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:text="TARJETA"
-        app:layout_constraintStart_toStartOf="@+id/rb_contado"
-        app:layout_constraintTop_toBottomOf="@+id/rb_contado" />
 
     <CheckBox
         android:id="@+id/ch_plato1"
@@ -145,7 +129,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="1dp"
         android:text="FANTA 2L"
         app:layout_constraintStart_toStartOf="@+id/ch_refresco1"
         app:layout_constraintTop_toBottomOf="@+id/ch_refresco1" />
@@ -165,8 +149,8 @@
         android:id="@+id/edt_ci"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="14dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="13dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="CI/NIT"
@@ -193,6 +177,34 @@
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/ch_plato2"
         app:layout_constraintTop_toBottomOf="@+id/ch_plato2" />
+
+    <RadioGroup
+        android:id="@+id/forma_pago"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+        <RadioButton
+            android:id="@+id/rb_contado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="CONTADO"
+            app:layout_constraintStart_toStartOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <RadioButton
+            android:id="@+id/rb_tar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="TARJETA"
+            app:layout_constraintStart_toStartOf="@+id/rb_contado"
+            app:layout_constraintTop_toBottomOf="@+id/rb_contado" />
+    </RadioGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
